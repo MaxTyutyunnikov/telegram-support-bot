@@ -32,7 +32,7 @@ function checkRights(ctx, config) {
     // Is admin group
     if (ctx.chat.id.toString() === config.staffchat_id ||
       ctx.session.groupAdmin) {
-      console.log('Permission granted for ' + ctx.from.username);
+      console.log('Permission granted for ' + ctx.from.username + ' ' + ctx.from.id);
       resolve(true);
     } else resolve(false);
   });
